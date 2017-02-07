@@ -1,16 +1,16 @@
-Jenkinsfile (Declarative Pipeline)
-		pipeline 
-		{
-			agent 
-			{docker 'node:6.3'}
-			stages
+Jenkinsfile(Declarative Pipeline)
+pipeline 
+{
+	agent 
+	{docker 'node:6.3'}
+	stages
+	{
+			stage('build')
 			{
-					stage('build')
+					steps 
 					{
-							steps 
-							{
-								sh 'npm --version'
-							}
+						sh 'npm --version'
 					}
 			}
-		}
+	}
+}
